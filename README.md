@@ -1,7 +1,7 @@
 > Ödev Açıklaması
 
--[ ] Lütfen bu uygulamanızı React kullanarak yapın.
--[ ] Bu uygulamada Create-React-App kullanarak bir başlangıç yapın.
+-[x] Lütfen bu uygulamanızı React kullanarak yapın.
+-[x] Bu uygulamada Create-React-App kullanarak bir başlangıç yapın.
 
 ### Uygulama detayı
 
