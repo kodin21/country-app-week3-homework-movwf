@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import TabHeader from './TabHeader';
 import fetchCountryData from '../../services/fetchCountryData';
 
 function Tabs() {
+  const [currentTab, setCurrentTab] = useState('country-list');
   const [countryData, setCountryData] = useState([]);
 
   useEffect(() => {
@@ -11,7 +13,8 @@ function Tabs() {
 
   return (
     <div className="h-4/6 w-11/12 border-2 rounded-lg flex flex-col">
-      Tabs
+      <TabHeader {...{ setCurrentTab }} />
+      TabsBody
     </div>
   );
 }
