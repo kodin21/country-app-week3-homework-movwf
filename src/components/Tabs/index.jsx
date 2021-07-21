@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import TabBody from './TabBody';
 import TabHeader from './TabHeader';
 import fetchCountryData from '../../services/fetchCountryData';
 
@@ -14,7 +15,7 @@ function Tabs() {
   return (
     <div className="h-4/6 w-11/12 border-2 rounded-lg flex flex-col">
       <TabHeader {...{ setCurrentTab }} />
-      TabsBody
+      <TabBody />
     </div>
   );
 }
