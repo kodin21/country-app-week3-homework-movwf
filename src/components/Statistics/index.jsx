@@ -1,6 +1,7 @@
 import React from 'react';
 import useStatistics from '../../hooks/useStatistics';
 import LanguageStats from './LanguageStats';
+import PopulationStats from './PopulationStats';
 
 function Statistics({ props }) {
   const { countryData } = props;
@@ -12,7 +13,7 @@ function Statistics({ props }) {
       <span className="w-full text-3xl text-center mb-5">Statistics</span>
       <div className="w-full flex flex-row">
         <LanguageStats {...{ statisticsData }} />
-        Population Stats
+        <PopulationStats {...{ statisticsData }} />
       </div>
     </div>
   );
