@@ -6,12 +6,13 @@
   "repository": "https://github.com/kodin21/country-app-week3-homework-movwf.git",
   "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "BROWSER=none FAST_REFRESH=false craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@craco/craco": "^6.2.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -39,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.31.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -46,6 +48,8 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.5"
   }
 }
