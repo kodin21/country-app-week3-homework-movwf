@@ -1,3 +1,19 @@
+### Ülke Listesi / Istatistikleri Uygulaması
+
+> [Live Preview](https://bootcamp-movwf-country-roads.netlify.app/)
+
+- React
+- Tailwind
+- [Rest Countries API](https://restcountries.eu/)
+
+kullanılarak tamamlanmıştır.
+
+> ### Screenshots
+
+<kbd>![Country Road](https://i.ibb.co/FsNzp8L/country-roads.png)</kbd>
+
+<kbd>![Country Road - Statistics](https://i.ibb.co/k5tfqp1/country-roads-2.png)</kbd>
+
 > Ödev Açıklaması
 
 - [x] Lütfen bu uygulamanızı React kullanarak yapın.
@@ -5,11 +21,11 @@
 
 ### Uygulama detayı
 
-- [ ] Açılış sayfasında [Ülke Listesi, Istatistikler] adında iki buton olmalı. Ulke listesi ise açılışta seçili olarak gelmeli. (Tab gibi düşünebilirsiniz.)
+- [x] Açılış sayfasında [Ülke Listesi, Istatistikler] adında iki buton olmalı. Ulke listesi ise açılışta seçili olarak gelmeli. (Tab gibi düşünebilirsiniz.)
 
-- [ ] Ülke listesi seçili olduğu zaman ekranda API'dan dönen ülkelerin [Isim, Bayrak, Baskent, Dil] bilgilerinin yer aldığı bir kart olacak.
+- [x] Ülke listesi seçili olduğu zaman ekranda API'dan dönen ülkelerin [Isim, Bayrak, Baskent, Dil] bilgilerinin yer aldığı bir kart olacak.
 
-- [ ] Istatistikler seçili olduğu zaman ise ekranda bu ülkelerde en çok konuşulan 10 dil aşağıdaki formatta yer alacak.
+- [x] Istatistikler seçili olduğu zaman ise ekranda bu ülkelerde en çok konuşulan 10 dil aşağıdaki formatta yer alacak.
 
 ```
 Orn:
@@ -21,7 +37,7 @@ Orn:
 10) xx - 7
 ```
 
-- [ ] Olsa iyi olur: Uygulamanızi bir link üzerinden yayınlamayı deneyin (deploy). Yayınlayabilirseniz readme dosyanıza live preview olarak o linki ekleyin. Kullanabileceğiniz örnek servisler: Vercel, Netlify (Başka yöntem kullanmakta özgürsünüz)
+- [x] Olsa iyi olur: Uygulamanızi bir link üzerinden yayınlamayı deneyin (deploy). Yayınlayabilirseniz readme dosyanıza live preview olarak o linki ekleyin. Kullanabileceğiniz örnek servisler: Vercel, Netlify (Başka yöntem kullanmakta özgürsünüz)
 
 ## API Link
 
