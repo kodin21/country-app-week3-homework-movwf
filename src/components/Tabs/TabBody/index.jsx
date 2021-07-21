@@ -1,8 +1,10 @@
 import React from 'react';
 import CountryList from '../../CountryList';
+import CountryDetail from '../../CountryDetail';
 
 const TabsList = {
-  'country-list': (props) => <CountryList props={props} />
+  'country-list': (props) => <CountryList props={props} />,
+  'country-detail': (props) => <CountryDetail props={props} />
 };
 
 function TabBody({ currentTab, countryData, selectedCountry, setCurrentTab, setSelectedCountry }) {
