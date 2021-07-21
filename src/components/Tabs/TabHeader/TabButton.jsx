@@ -1,7 +1,13 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
+import selectRandom from '../../../utils/selectRandom';
+
+const Colors = ['red', 'yellow', 'blue', 'green'];
 
 function TabButton({ setCurrentTab, tabName, tabSelector }) {
+  // Generate random color
+  const selectedColor = selectRandom(Colors);
+
   return (
     <div
       className="w-32 h-full border-r-2 flex flex-col items-center justify-end rounded-tl-lg hover:bg-gray-100 cursor-pointer outline-none"
@@ -10,7 +16,7 @@ function TabButton({ setCurrentTab, tabName, tabSelector }) {
       onClick={() => setCurrentTab(tabSelector)}
     >
       <span className="h-10 flex flex-col justify-center">{tabName}</span>
-      <div className={`h-1 w-full bg-${"red"}-500`}> </div>
+      <div className={`h-1 w-full bg-${selectedColor}-500`}> </div>
     </div>
   );
 }
