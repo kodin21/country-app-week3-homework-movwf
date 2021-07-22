@@ -15,7 +15,7 @@ function Tabs() {
 
   return (
     <div className="h-4/6 w-11/12 border-2 rounded-lg flex flex-col">
-      <TabHeader {...{ setCurrentTab }} />
+      <TabHeader {...{ currentTab, setCurrentTab }} />
       <TabBody
         {...{ currentTab, setCurrentTab, countryData, selectedCountry, setSelectedCountry }}
       />

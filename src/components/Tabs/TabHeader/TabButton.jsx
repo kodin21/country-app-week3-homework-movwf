@@ -4,13 +4,16 @@ import selectRandom from '../../../utils/selectRandom';
 
 const Colors = ['red', 'yellow', 'blue', 'green'];
 
-function TabButton({ setCurrentTab, tabName, tabSelector }) {
+function TabButton({ currentTab, setCurrentTab, tabName, tabSelector }) {
   // Generate random color
   const selectedColor = selectRandom(Colors);
 
   return (
     <div
-      className="w-32 h-full border-r-2 flex flex-col items-center justify-end rounded-tl-lg hover:bg-gray-100 cursor-pointer outline-none"
+      className={`w-32 h-full border-r-2 flex flex-col items-center justify-end hover:bg-gray-100 cursor-pointer outline-none 
+        ${currentTab === 'country-list' && 'rounded-tl-lg'} 
+        ${currentTab === tabSelector && `bg-${selectedColor}-200`}
+      `}
       role="tab"
       tabIndex="0"
       onClick={() => setCurrentTab(tabSelector)}
