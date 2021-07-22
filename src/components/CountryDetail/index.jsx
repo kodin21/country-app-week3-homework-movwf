@@ -1,5 +1,9 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
+import Flag from './Flag';
+import BackButton from './BackButton';
+import DetailProp from './DetailProp';
+import DetailTitle from './DetailTitle';
+import DetailPropList from './DetailPropList';
 
 const CountryDetail = ({ props }) => {
   const { selectedCountry, countryData, setCurrentTab } = props;
@@ -8,57 +12,17 @@ const CountryDetail = ({ props }) => {
 
   return (
     <div className="h-full w-full flex flex-col">
-      <span
-        className="w-16 text-lg font-bold mb-4 outline-none"
-        role="button"
-        tabIndex="0"
-        onClick={() => {
-          setCurrentTab('country-list');
-        }}
-      >
-        {'< Back'}
-      </span>
+      <BackButton {...{ setCurrentTab }} />
       <div className="h-full w-full flex flex-row">
-        <div className="w-56 h-32">
-          <img src={flag} alt={name} />
-        </div>
+        <Flag url={flag} alt={name} />
         <div className="h-full flex flex-col px-10">
-          <span className="text-2xl font-bold">{name}</span>
-          <span className="text-md font-semibold">
-            Population : <span className="font-normal">{population.toLocaleString()}</span>
-          </span>
-          <span className="text-md font-semibold">
-            Region : <span className="font-normal">{region}</span>
-          </span>
-          <span className="text-md font-semibold">
-            Capital : <span className="font-normal">{capital}</span>
-          </span>
-          <span className="text-md font-semibold">
-            Currency :
-            <span className="font-normal">
-              {currencies[0].name} - {currencies[0].symbol}
-            </span>
-          </span>
-          <span className="text-md font-semibold">
-            Languages :
-            <ul className="list-disc list-inside">
-              {languages?.map((language) => (
-                <li key={language.name} className="font-normal">
-                  {language.name}
-                </li>
-              ))}
-            </ul>
-          </span>
-          <span className="text-md font-semibold">
-            Calling Codes :
-            <ul className="list-disc list-inside">
-              {callingCodes?.map((code) => (
-                <li key={code} className="font-normal">
-                  {code}
-                </li>
-              ))}
-            </ul>
-          </span>
+          <DetailTitle title={name} />
+          <DetailProp title="Population" value={population.toLocaleString()} />
+          <DetailProp title="Region" value={region} />
+          <DetailProp title="Capital" value={capital} />
+          <DetailProp title="Currency" value={`${currencies[0].name} - ${currencies[0].symbol}`} />
+          <DetailPropList title="Languages" list={languages} spreadKey="name" />
+          <DetailPropList title="Calling Codes" list={callingCodes} />
         </div>
       </div>
     </div>
