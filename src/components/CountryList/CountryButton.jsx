@@ -15,6 +15,7 @@ const CountryButton = ({ countryName, flagImg, setSelectedCountry, setCurrentTab
       <img
         src={flagImg}
         alt={countryName}
+        loading="lazy"
         className="w-10 h-2/3 flex flex-row items-center justify-center"
       />
       <span className="h-full text-md flex flex-row items-center px-3 truncate">{countryName}</span>
